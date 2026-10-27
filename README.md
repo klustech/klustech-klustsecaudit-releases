@@ -54,6 +54,8 @@ The installer is **not digitally signed**. A refresh reinstallation preserved ex
 
 ## Help us improve it
 
+**[Join the research preview beta — quick test guide and feedback links](BETA_TESTING.md)**
+
 If you are a Solidity developer, auditor, or security researcher, we'd especially value feedback about:
 
 - Windows setup/WSL compatibility and clear error messages.
