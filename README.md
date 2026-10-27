@@ -8,6 +8,30 @@
 
 > **Research preview, not a certified security auditor.** Independent autonomous exploit-discovery accuracy has **not** been established. Findings are provisional, can be wrong, and require independent reproduction and qualified human review. A scan with no reported findings does not establish security.
 
+## See KlustSecAudit in action
+
+Real screenshots captured from the installed Windows desktop research preview.
+
+### Dashboard and workspace
+
+![KlustSecAudit desktop Overview with local engine status and security workspace](screenshots/overview.png.png)
+
+### Audit workflow and evidence
+
+| Audit runs | Proof Lab |
+| --- | --- |
+| ![KlustSecAudit audit runs screen with bounded analysis stages](screenshots/audit-runs.png.png) | ![KlustSecAudit Proof Lab showing evidence-oriented verification workflows](screenshots/proof-lab.png.png) |
+| Configure an authorized Solidity security review and inspect execution stages and provisional results. | Review proof evidence, test status, and verification limitations. |
+
+### AI-assisted investigation
+
+![KlustSecAudit AI Researcher showing source-linked smart contract security analysis](screenshots/ai-researcher.png.png)
+
+Investigate source code with local Ollama or an optional cloud provider with explicit consent. AI output is **not** independent verification of a vulnerability.
+
+> Screenshots illustrate the interface and available workflows. They do not demonstrate benchmarked autonomous exploit discovery or guarantee that a finding is exploitable.
+
+
 ## What can I do with it?
 
 - **Import and explore** authorized Solidity/EVM projects, including local ZIP archives and supported public sources.
@@ -27,10 +51,6 @@
 **Windows prerequisites:** Windows 10 (build 19045+) or Windows 11 x64, WSL2/virtualization support, at least 8 GB RAM (16 GB recommended), ~20 GB available disk, and internet access during initial setup.
 
 The installer is **not digitally signed**. A refresh reinstallation preserved existing audits on one developer PC, but a fresh installation on a separate clean Windows machine has **not been validated**. Expect setup friction and report it.
-
-## Screenshots and demo
-
-We are preparing public, privacy-reviewed screenshots of the running desktop application. We will not publish screenshots showing customer contracts, private audit sources, tokens, API keys, or sensitive local identifiers.
 
 ## Help us improve it
 
