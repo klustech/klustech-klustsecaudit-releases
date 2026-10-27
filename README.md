@@ -1,48 +1,56 @@
-# KlustSecAudit — Desktop Smart Contract Security Workbench
+# KlustSecAudit
 
-**Status: Research preview — public installer not released yet.**
+**A Windows desktop workbench for authorized EVM smart-contract security research.**
 
-KlustSecAudit is a Windows desktop application for **authorized** Ethereum/EVM smart contract security research. It brings Solidity source inspection, static analysis, AI-assisted investigation, bounded local testing, and evidence-backed reporting into a single desktop workflow.
+[**Download Windows Research Preview v0.3.0**](https://github.com/klustech/klustech-klustsecaudit-releases/releases/download/v0.3.0-preview.1/KlustSecAudit_0.3.0_x64-setup.exe) · [Release notes](https://github.com/klustech/klustech-klustsecaudit-releases/releases/tag/v0.3.0-preview.1) · [SHA-256 checksum](https://github.com/klustech/klustech-klustsecaudit-releases/releases/download/v0.3.0-preview.1/SHA256SUMS.txt) · [Installation guide](INSTALLATION.md) · [Report a problem](https://github.com/klustech/klustech-klustsecaudit-releases/issues/new/choose)
 
-> **Important:** KlustSecAudit is a research tool, **not** a certified auditor or an autonomous exploit-discovery system. Findings are provisional until independently reviewed and reproduced. A clean scan does not establish security.
+**Status:** Public **pre-release** (`v0.3.0-preview.1`) — unsigned Windows x64 installer. The source code remains private.
 
-## Capabilities
+> **Research preview, not a certified security auditor.** Independent autonomous exploit-discovery accuracy has **not** been established. Findings are provisional, can be wrong, and require independent reproduction and qualified human review. A scan with no reported findings does not establish security.
 
-- Import authorized Solidity sources from ZIP files, local projects, or supported public repositories.
-- Browse source snapshots and source-linked research notes.
-- Compile Solidity and run Slither static analysis when the approved toolchain is installed.
-- Run bounded Foundry tests and review reproducible evidence in supported proof workflows.
-- Investigate with **local Ollama** or **optional** external OpenAI/Anthropic APIs with explicit consent and independent API billing.
-- Export audit reports, results, and integrity evidence.
+## What can I do with it?
 
-## Download and availability
+- **Import and explore** authorized Solidity/EVM projects, including local ZIP archives and supported public sources.
+- **Review static signals** using Solidity compilation and Slither when the approved local tooling is available.
+- **Investigate with AI** using local Ollama or an *optional*, explicitly approved OpenAI/Anthropic API connection (billed separately by those providers).
+- **Run bounded tests** with Foundry in supported, authorized isolated workflows and inspect evidence limitations.
+- **Keep records** of research questions, audit runs, provisional findings and evidence; export reports and integrity evidence.
 
-The first public installer is **not yet published**. When validation is complete, it will appear on the [Releases page](https://github.com/klustech/klustech-klustsecaudit-releases/releases).
+### First-time experience
 
-The initial distribution is planned for **Windows x64**. The installer may be **unsigned**, and Windows may display a publisher warning. Do not bypass organizational security policies. Before installing any release, check its published SHA-256 checksum.
+1. [Download the Windows installer](https://github.com/klustech/klustech-klustsecaudit-releases/releases/download/v0.3.0-preview.1/KlustSecAudit_0.3.0_x64-setup.exe) and [the SHA-256 checksum](https://github.com/klustech/klustech-klustsecaudit-releases/releases/download/v0.3.0-preview.1/SHA256SUMS.txt).
+2. Verify the downloaded installer against the published checksum (see [Installation](INSTALLATION.md)).
+3. Open the app, complete the guided Windows/WSL setup as applicable, then **Verify environment → Start backend → Open dashboard**.
+4. Import **only a project you own or have authorization to audit**.
+5. Try source browsing, the AI Researcher, a static review, and report export. Don't interpret a candidate finding as a verified exploit.
 
-For system requirements and the planned graphical setup process, see [Installation](INSTALLATION.md).
+**Windows prerequisites:** Windows 10 (build 19045+) or Windows 11 x64, WSL2/virtualization support, at least 8 GB RAM (16 GB recommended), ~20 GB available disk, and internet access during initial setup.
 
-## Known limitations
+The installer is **not digitally signed**. A refresh reinstallation preserved existing audits on one developer PC, but a fresh installation on a separate clean Windows machine has **not been validated**. Expect setup friction and report it.
 
-- Independent exploit-discovery accuracy has **not** been demonstrated by a sufficient controlled benchmark.
-- Detected candidates, AI assessments, and proof artifacts **are not automatically verified vulnerabilities**.
-- Local tool execution and AI model availability depend on correctly installed and authorized prerequisites.
-- A successfully built installer does not guarantee a successful clean-machine installation or complete recovery.
-- Do not use this research preview as the sole basis for protecting or deploying financial contracts.
+## Screenshots and demo
 
-## Privacy and responsible use
+We are preparing public, privacy-reviewed screenshots of the running desktop application. We will not publish screenshots showing customer contracts, private audit sources, tokens, API keys, or sensitive local identifiers.
 
-The desktop workflow is designed for local, loopback-bound operation. Local Ollama inference can remain offline. If an external AI provider is selected, scoped source excerpts are sent to that provider **only with explicit approval**, and API charges may apply.
+## Help us improve it
 
-Audit only software you own or are authorized to assess. Do not put private keys, credentials, or confidential customer code into public GitHub issues.
+If you are a Solidity developer, auditor, or security researcher, we'd especially value feedback about:
 
-## Feedback
+- Windows setup/WSL compatibility and clear error messages.
+- Whether source imports, citations, static analysis and reports are useful.
+- False positives or missed cases **on contracts you are authorized to share**.
+- Whether the proof/evidence UI distinguishes actual verification from hypotheses clearly.
 
-After the first release, please use [Issues](https://github.com/klustech/klustech-klustsecaudit-releases/issues) for installation problems, reproducible bugs, and feature feedback. Include the release version and non-sensitive diagnostic information.
+[**Report an installation bug or request an improvement**](https://github.com/klustech/klustech-klustsecaudit-releases/issues/new/choose). Please include your OS version, release version, steps to reproduce and **redacted** errors. Do not post passwords, API tokens, local credentials, confidential source files, exploit secrets or private audit databases.
 
-## Source code and licensing
+## Distribution, security and limitations
 
-This repository is for **public binary distributions and release documentation**. It does **not** contain the KlustSecAudit application source, which remains private. The public availability of this repository does not by itself license the proprietary application source or authorize redistribution of binaries. Applicable binary-use terms will be supplied before the first download.
+- This public GitHub repository hosts **binary releases and documentation** only. It is **not an open-source release** of the application; the application source remains private.
+- Public downloads are offered as a research preview; no independent safety certification, comprehensive audit guarantee or commercial service-level support is claimed. Avoid relying on it as the sole security control for deployed financial contracts.
+- Local Ollama can be used without paid cloud AI. Cloud AI is optional, requires approval to send scoped source excerpts, and may incur API usage charges.
+- Tool setup depends on local Windows/WSL, approved rootless sandbox resources and appropriate permissions. Unknown or incomplete checks are not security passes.
+- Do not use KlustSecAudit on systems or code you are not authorized to assess.
 
-**Developed by Klustertech.**
+See [full installation details](INSTALLATION.md), [release readiness checklist](RELEASE_CHECKLIST.md) and [public release notes](https://github.com/klustech/klustech-klustsecaudit-releases/releases/tag/v0.3.0-preview.1).
+
+**Built by Klustertech.**
